@@ -4,9 +4,9 @@ The Broomhead et al. (2000) model is a saccadic model that can generate both nor
 
 The broomhead.m file includes the broomhead function which integrates the model using MATLAB for a time interval and a model parameter set.
 
-Paper of the model can be found at:
-http://www.ncbi.nlm.nih.gov/pubmed/10836585
+Descriptions of the model can be found at:
 http://eprints.ma.man.ac.uk/217/01/covered/MIMS_ep2006_62.pdf
+http://link.springer.com/article/10.1007/s00285-005-0336-4
 
 ##Example##
 
