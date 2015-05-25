@@ -1,11 +1,12 @@
 function [tout,yout]  = broomhead( t, y, p )
-%BROOMHEAD Integrates the Broomhead et al. (2000) saccadic model.
+%BROOMHEAD Integrates the Broomhead et al. (2000) saccadic model using
+%ode15s Matlab ODE solver.
 %
-%   PPI = BROOMHEAD( t, y, p ) Integrates the Broomhead et al. (2000)
+%   [tout,yout] = BROOMHEAD( t, y, p ) Integrates the Broomhead et al. (2000)
 %   saccadic model for a time span t, with initial conditions y and model
 %   parameters p.
 %
-% Syntax:  [output1] = getImageResolution(input1,input2,input3)
+% Syntax:  [tout,yout] = broomhead( t, y, p )
 %
 % Inputs:
 %    t - Integration time span
@@ -13,10 +14,11 @@ function [tout,yout]  = broomhead( t, y, p )
 %    p - Model parameters
 %
 % Outputs:
+%    yout - Time output
 %    yout - Model output
 %
 % Example:
-%    yout  = broomhead( [0 6], [0 0 0 0 0 2], [120 1.5 0.0045 0.05 600 9] )
+%    [tout,yout]  = broomhead( [0 6], [0 0 0 0 0 2], [120 1.5 0.0045 0.05 600 9] )
 %    This example integrates the model for 6 seconds with initial
 %    conditions [0 0 0 0 0 2] and model parameters [120 1.5 0.0045 0.05 600
 %    9].
