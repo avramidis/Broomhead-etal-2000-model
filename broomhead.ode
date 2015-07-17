@@ -1,0 +1,29 @@
+# XPP ode file for the Broomhead et al. 2000 saccadic model
+#
+# $Author: Eleftherios Avramidis $
+# $Email: el.avramidis@gmail.com $
+# $Date: 2015/05/25 $
+# $Version: 0.1 $
+# Copyright: MIT License
+
+init g=the_g,u=the_u,n=the_n,r=the_r,l=the_l,m=the_m
+
+par aval=the_aval,bval=the_bval,epval=the_epval,gval=the_gval,atval=the_atval,btval=the_btval,T1=0.15,T2=0.012,Tn=25
+
+f(x)=if((x)>0)then(atval*(1-exp(-x/btval)))else(-(aval/bval)*x*exp(x/(bval)))
+
+g'=u
+u'=-(((1/T1)+(1/T2))*u)-(1/(T1*T2)*g)+(1/(T1*T2))*n+((1/T1)+(1/T2))*(r-l)
+n'=-(n/Tn)+(r-l)
+r'=(1/epval)*(-r-(gval*r*l^2)+f(m))
+l'=(1/epval)*(-l-(gval*l*r^2)+f(-m))
+m'=-(r-l)
+
+@ bound=1000000             # to prevent "out of bounds" error
+@ meth=beckeul    
+@ total=ttime               
+@ dt=1e-5                   # dt
+@ maxstor=1000000           # to increase the maximum storage capacity
+@ nout=40                   # to save one data point every nout calculated points
+@ output=output.dat
+done    
