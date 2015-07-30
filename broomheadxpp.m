@@ -2,11 +2,11 @@ function [tout,yout]  = broomheadxpp( t, y, p )
 %BROOMHEADXPP Integrates the Broomhead et al. (2000) saccadic model using
 %XPPAUT
 %
-%   [tout,yout] = BROOMHEADXPP( t, y, p ) Integrates the Broomhead et al. (2000)
+%   [tout,yout] = BROOMHEADXPP( t, y, p ) Integrates using XPPAUT the Broomhead et al. (2000)
 %   saccadic model for a time span t, with initial conditions y and model
-%   parameters p.
+%   parameters p. XPPAUT must be in the PATH.
 %
-% Syntax:  [tout,yout] = broomhead( t, y, p )
+% Syntax:  [tout,yout] = broomheadxpp( t, y, p )
 %
 % Inputs:
 %    t - Integration time span
@@ -18,7 +18,7 @@ function [tout,yout]  = broomheadxpp( t, y, p )
 %    yout - Model output
 %
 % Example:
-%    [tout,yout]  = broomhead( [0 6], [0 0 0 0 0 2], [120 1.5 0.0045 0.05 600 9] )
+%    [tout,yout]  = broomheadxpp( [0 6], [0 0 0 0 0 2], [120 1.5 0.0045 0.05 600 9] )
 %    This example integrates the model for 6 seconds with initial
 %    conditions [0 0 0 0 0 2] and model parameters [120 1.5 0.0045 0.05 600
 %    9].
