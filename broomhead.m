@@ -108,7 +108,7 @@ jac(4,2) = 0;
 jac(4,3) = 0;
 jac(4,4) = -(p(4) * (y(5)^ 2) + 1) / p(3);
 jac(4,5) = -(2 * p(4) * y(5) * y(4)) / p(3);
-jac(4,6) = dsburstf1(y(6), p(1), p(2), p(5), p(6)) / p(3);
+jac(4,6) = dsburstf(y(6), p(1), p(2), p(5), p(6)) / p(3);
 
 
 jac(5,1) = 0;
@@ -116,7 +116,7 @@ jac(5,2) = 0;
 jac(5,3) = 0;
 jac(5,4) = -(2 * p(4) * y(5) * y(4)) / p(3);
 jac(5,5) = -(p(4) * (y(4)^2) + 1) / p(3);
-jac(5,6) = dsburstf2(-y(6), p(1), p(2), p(5), p(6)) / p(3);
+jac(5,6) = dsburstf(-y(6), p(1), p(2), p(5), p(6)) / p(3);
 
 jac(6,1) = 0;
 jac(6,2) = 0;
@@ -139,8 +139,8 @@ end
 
 end
 
-function [ y ] = dsburstf1( x, aval,  bval,  atval,  btval )
-%dsburstf1 Derivative of burst neuron responce
+function [ y ] = dsburstf( x, aval,  bval,  atval,  btval )
+%dsburstf Derivative of burst neuron responce
 
 if (x > 0.00)
     y=(atval*exp(-x / btval)) / btval;
@@ -149,16 +149,6 @@ else
     y=-((aval*exp(x / bval)) / bval + (aval*x*exp(x / bval)) / bval^2);
 end
 
-end
-
-function [ y ] = dsburstf2( x, aval,  bval,  atval,  btval )
-%dsburstf2 Derivative of burst neuron responce
-
-if (x > 0.00)
-    y=-(atval*exp(x / btval)) / btval;
-else
-    
-    y=((aval*exp(-x / bval)) / bval - (aval*x*exp(-x / bval)) / bval^2);
 end
 
 end
