@@ -14,7 +14,7 @@ function [tout,yout]  = broomhead( t, y, p )
 %    p - Model parameters
 %
 % Outputs:
-%    yout - Time output
+%    tout - Time output
 %    yout - Model output
 %
 % Example:
