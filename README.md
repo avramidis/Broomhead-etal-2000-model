@@ -16,6 +16,8 @@ Descriptions of the model can be found at:
 http://eprints.ma.man.ac.uk/217/01/covered/MIMS_ep2006_62.pdf
 http://link.springer.com/article/10.1007/s00285-005-0336-4
 
+An optimisation method for this model can be found at: Avramidis, Eleftherios, and Ozgur E. Akman. "Optimisation of an exemplar oculomotor model using multi-objective genetic algorithms executed on a GPU-CPU combination." BMC Systems Biology 11.1 (2017): 40. DOI: 10.1186/s12918-017-0416-2
+
 This codebase was developed in collaboration with [Dr. Ozgur E. Akman](http://emps.exeter.ac.uk/mathematics/staff/oea201) at the [University of Exeter, UK](http://www.exeter.ac.uk/). 
 
 ##How to run the code##
