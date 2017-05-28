@@ -20,7 +20,7 @@ An optimisation method for this model can be found at: Avramidis, Eleftherios, a
 
 This codebase was developed in collaboration with [Dr. Ozgur E. Akman](http://emps.exeter.ac.uk/mathematics/staff/oea201) at the [University of Exeter, UK](http://www.exeter.ac.uk/). 
 
-##How to run the code##
+## How to run the code ##
 
 Using Matlab run the main.m or mainxpp.m file.
 
