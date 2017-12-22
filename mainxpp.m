@@ -1,5 +1,5 @@
 close all
-clear all
+clear variables
 
 t=6;                            % Integration time span. 0 to 6 seconds.
 initial=[0 0 0 0 0 2];          % Broomhead et al. model's initial values. Set for 2 degrees eye movement.
