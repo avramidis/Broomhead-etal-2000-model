@@ -28,12 +28,12 @@ function [tout,yout]  = broomhead( t, y, p )
 % Subfunctions: ode_system, jacobian, sburstf, dsburstf1, dsburstf2
 % MAT-files required: none
 %
-% See also: nan
+% See also: none
 %
 % $Author: Eleftherios Avramidis $
 % $Email: el.avramidis@gmail.com $
 % $Date: 2015/05/13 $
-% $Version: 0.1 $
+% $Version: 1.0 $
 % Copyright: MIT License
 
 if nargin~=3
