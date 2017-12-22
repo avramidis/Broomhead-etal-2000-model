@@ -29,12 +29,12 @@ function [tout,yout]  = broomheadxpp( t, y, p )
 % MAT-files required: none
 % Other software required: xppaut
 %
-% See also: nan
+% See also: none
 %
 % $Author: Eleftherios Avramidis $
 % $Email: el.avramidis@gmail.com $
 % $Date: 2015/05/25 $
-% $Version: 0.1 $
+% $Version: 1.0 $
 % Copyright: MIT License
 
 if nargin~=3
